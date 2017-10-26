@@ -34,7 +34,8 @@ describe("FilterForm", () => {
     expect(props.updateFilter.mock.calls.length).toBe(1);
   });
 
-  // test("renders correctly", () => {
-  //   // Snapshot testing here
-  // });
+  test("renders correctly", () => {
+    // Snapshot testing here
+    expect(toJson(filterFormWrapper)).toMatchSnapshot();
+  });
 });
