@@ -34,20 +34,20 @@ describe('review form container', () => {
     });
 
     test('correctly maps dispatch to props', () => {
-      expect(reviewFormWrapper.props().createReview).toBeDefined();
+      // Your code here
     });
 
     test('pre-fills rating field to 5', () => {
-      expect(reviewRating.props().value).toEqual(5);
+      // Your code here
     });
 
     test('pre-fills comment field with empty string', () => {
-      expect(reviewBody.props().value).toEqual('');
+      // Your code here
     });
 
     test('navigates to bench show on button click', () => {
-      benchShowButton.simulate('click');
-      expect(push).toBeCalledWith('/benches/undefined');
+      // Refer to react-mock-router docs
+     // Your code here
     });
   });
 

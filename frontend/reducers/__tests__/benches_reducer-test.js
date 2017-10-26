@@ -1,6 +1,6 @@
-import BenchesReducer from '../benches_reducer';
-import { testBenches } from '../../testUtil/bench_helper';
-import * as BenchActions from '../../actions/bench_actions';
+import BenchesReducer from "../benches_reducer";
+import { testBenches } from "../../testUtil/bench_helper";
+import * as BenchActions from "../../actions/bench_actions";
 
 /*
 NOTE: Our frontend state shape looks like this:
@@ -24,31 +24,32 @@ NOTE: Our frontend state shape looks like this:
 }
 */
 
-describe('BenchesReducer', () => {
-
-  test('should initialize with an empty object as the default state', () => {
+describe("BenchesReducer", () => {
+  test("should initialize with an empty object as the default state", () => {
+    // Your code here
     expect(BenchesReducer(undefined, {})).toEqual({});
   });
 
-  describe('handling the RECEIVE_BENCHES action', () => {
+  describe("handling the RECEIVE_BENCHES action", () => {
     let action;
 
     beforeEach(() => {
+      // Set up the action that will be passed into the reducer:
+      // Your code here
       action = {
         type: BenchActions.RECEIVE_BENCHES,
-        benches: testBenches,
+        benches: testBenches
       };
     });
 
-    test('should replace the state with the action\'s benches', () => {
-      const state = BenchesReducer(undefined, action);
-      expect(state).toEqual(testBenches);
+    test("should replace the state with the action's benches", () => {
+      // Your code here
+      expect(BenchesReducer(undefined, action)).toEqual(testBenches);
     });
 
-    test('should not modify the old state', () => {
-      let oldState = { 1: 'oldState' };
-      BenchesReducer(oldState, action);
-      expect(oldState).toEqual({ 1: 'oldState' });
+    test("should not modify the old state", () => {
+      // Your code here
+      expect(1).toEqual(0);
     });
   });
 });

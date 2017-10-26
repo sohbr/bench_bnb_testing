@@ -11,13 +11,9 @@ const mockStore = configureMockStore(middlewares);
 describe('async actions', () => {
 
   test('fetchBenches creates RECEIVE_BENCHES after fetching benches', () => {
-
-    const expectedActions = [
-      {
-        type: actions.RECEIVE_BENCHES,
-        benches: testBenches,
-      }
-    ];
+    // REFER TO REDUX TESTS DOCS
+    // Set up expectedActions:
+    // Your code here
 
     ApiUtil.fetchBenches = jest.fn(() => {
       return Promise.resolve(testBenches);
@@ -26,8 +22,7 @@ describe('async actions', () => {
     const store = mockStore({ benches: {} });
 
     return store.dispatch(actions.fetchBenches()).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
+        // Your code here
     });
   });
-
 });

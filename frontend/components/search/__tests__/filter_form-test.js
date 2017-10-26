@@ -25,16 +25,14 @@ describe('FilterForm', () => {
   minSeatFilter = filterFormWrapper.find('input').first();
 
   test('minSeating filter defaults to the passed in props of minSeating', () => {
-    expect(minSeatFilter.props().value)
-      .toEqual(2);
+    // your code here
   });
 
   test('updates filter onChange', () => {
-    minSeatFilter.props().onChange({currentTarget: 3});
-    expect(props.updateFilter.mock.calls.length).toBe(1);
+    // Your code here
   });
 
   test ('renders correctly', () => {
-    expect(toJson(filterFormWrapper)).toMatchSnapshot();
+    // Snapshot testing here
   });
 });
