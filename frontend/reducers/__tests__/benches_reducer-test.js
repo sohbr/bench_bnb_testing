@@ -49,7 +49,9 @@ describe("BenchesReducer", () => {
 
     test("should not modify the old state", () => {
       // Your code here
-      expect(1).toEqual(0);
+      const oldState = { 1: "oldState" };
+      BenchesReducer(oldState, action);
+      expect(oldState).toEqual(oldState);
     });
   });
 });
